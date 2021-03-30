@@ -1,0 +1,894 @@
+@font-face {
+  font-family: "couture";
+  src: url("../couture.otf");
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  45% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform: rotate(5deg);
+  }
+}
+
+/* line 56, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  color: #111111;
+  animation: reveal 2s 0s;
+  animation-fill-mode: forwards;
+}
+
+/* line 65, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+a {
+  text-decoration: none;
+  color: #111111;
+  transition: all .3s 0s;
+}
+
+/* line 70, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+a:hover {
+  color: #66A7A5;
+  text-decoration: none;
+}
+
+/* line 76, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+h1, h2, h3 {
+  font-family: "Crete Round", serif;
+}
+
+/* line 80, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+hr {
+  border-color: #111111;
+}
+
+/* line 85, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#container {
+  padding: 30px 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+}
+
+/* line 92, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-lg {
+  height: 100%;
+  flex-grow: 1;
+  margin: 0 30px;
+}
+
+/* line 97, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-lg .search {
+  padding-top: 90px;
+  margin-left: 10px;
+}
+
+/* line 101, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-lg .search .bg-light {
+  background-color: transparent !important;
+}
+
+/* line 105, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-lg .search input {
+  width: 140px;
+}
+
+/* line 110, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-lg .navigation {
+  padding-top: 122px;
+  box-sizing: border-box;
+  padding-left: 0;
+}
+
+/* line 116, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-lg a {
+  font-size: 20px;
+  line-height: 28px;
+  margin-left: 10px;
+  display: block;
+}
+
+/* line 123, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-lg #name a {
+  padding-top: 123px;
+  font-family: couture, sans-serif;
+  font-size: 70px;
+  font-style: italic;
+  line-height: 70px;
+}
+
+/* line 132, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-top {
+  display: none;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  padding: 0 30px;
+}
+
+/* line 142, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-top img {
+  width: 70px;
+  float: left;
+  cursor: pointer;
+}
+
+/* line 148, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-top h3 {
+  font-family: couture, sans-serif;
+  font-style: italic;
+  float: right;
+  line-height: 70px;
+  margin: 0;
+}
+
+/* line 157, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+ul {
+  list-style: none;
+}
+
+/* line 161, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper {
+  height: 120%;
+  padding-top: 95px;
+  width: 0;
+  position: fixed;
+  top: -10px;
+  z-index: 100;
+  background-color: white;
+  overflow-x: hidden;
+  transition: all 0.7s 0s;
+}
+
+/* line 172, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper #sidebar-sm {
+  padding-left: 20px;
+}
+
+/* line 176, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper #closebtn {
+  position: relative;
+  right: -155px;
+  margin-bottom: 20px;
+}
+
+/* line 182, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper .search {
+  margin-top: 20px;
+}
+
+/* line 185, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper .search .bg-light {
+  background-color: transparent;
+}
+
+/* line 189, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper .search input {
+  width: 140px;
+}
+
+/* line 194, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper .navigation {
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+/* line 199, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#sidebar-sm-wrapper a {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* line 205, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.content-container {
+  flex-grow: 6;
+  overflow-y: scroll;
+  height: 91.5vh;
+  margin: 0 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* line 214, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 221, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+section {
+  margin: 40px 0;
+}
+
+/* line 225, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+a .button, button {
+  display: inline;
+  font-size: 18px;
+  border: 2px solid #111111;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 5px 12px;
+  transition: all .3s 0s;
+}
+
+/* line 234, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+a .button:hover, button:hover {
+  border: 2px solid #66A7A5;
+  background-color: #66A7A5;
+  color: white;
+}
+
+/* line 241, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#carousel {
+  margin-top: 0;
+}
+
+/* line 245, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#introduction {
+  display: flex;
+  align-items: center;
+}
+
+/* line 249, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#introduction img {
+  width: 100%;
+  min-width: 200px;
+}
+
+/* line 254, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#introduction div:nth-child(1) {
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* line 259, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#introduction div:nth-child(2) {
+  margin-left: 40px;
+  flex-grow: 2;
+}
+
+/* line 266, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#explore h2 {
+  text-align: center;
+}
+
+/* line 270, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#explore #explore-links {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+/* line 276, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#explore a {
+  width: 31%;
+  margin: 0 1%;
+  font-size: 23px;
+  text-align: center;
+  line-height: 62px;
+  box-sizing: border-box;
+  color: #66A7A5;
+  border: 3px solid #66A7A5;
+}
+
+/* line 286, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#explore a:hover {
+  background-color: #66A7A5;
+  color: white;
+}
+
+/* line 293, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#index-contact {
+  text-align: center;
+  position: relative;
+}
+
+/* line 297, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#index-contact #contact-flex {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+/* line 302, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#index-contact #contact-flex div {
+  width: 31%;
+  margin: 0 1%;
+}
+
+/* line 308, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#index-contact img {
+  width: 100%;
+}
+
+/* line 313, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 350px;
+}
+
+/* line 320, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description.about, .description.graphic-design, .description.photography, .description.personal, .description.contact {
+  background-image: url("../images/bg_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* line 327, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description.graphic-design {
+  background-image: url("../images/bg_2.jpg");
+}
+
+/* line 332, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description.photography {
+  background-image: url("../images/bg_3.jpg");
+}
+
+/* line 337, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description.personal {
+  background-image: url("../images/bg_4.jpg");
+}
+
+/* line 342, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description.contact {
+  background-image: url("../images/bg_5.jpg");
+}
+
+/* line 347, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description p, .description h2 {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 354, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.description h2 {
+  color: #66A7A5;
+}
+
+/* line 360, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#background-info {
+  margin: 60px auto 120px auto;
+}
+
+/* line 363, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#background-info span {
+  color: #66A7A5;
+}
+
+/* line 367, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#background-info #clickable-boxes {
+  display: flex;
+  justify-content: space-around;
+  max-width: 650px;
+  width: 80%;
+  margin: 100px auto;
+}
+
+/* line 374, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#background-info #clickable-boxes .click {
+  width: 80px;
+  height: 14px;
+  background-color: #66A7A5;
+  display: block;
+  cursor: pointer;
+}
+
+/* line 381, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#background-info #clickable-boxes .click.tilting {
+  animation: tilt 1s 0s infinite;
+}
+
+/* line 387, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#background-info h5 {
+  text-align: center;
+  transition: all .5s .3s;
+  margin: 0;
+}
+
+/* line 393, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#background-info .hidden {
+  opacity: 0;
+}
+
+/* line 398, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#experience-desc {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 403, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* line 409, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume:hover h3 {
+  color: #66A7A5;
+}
+
+/* line 413, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume h3 {
+  width: 30%;
+  text-align: center;
+  margin: 0;
+}
+
+/* line 419, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion {
+  width: 70%;
+  margin: 10px 0;
+}
+
+/* line 423, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion ul {
+  padding: 0;
+}
+
+/* line 427, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion ul ul {
+  list-style-type: disc;
+}
+
+/* line 431, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 436, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion p, .resume .accordion .description h2, .description .resume .accordion h2 {
+  margin: 0;
+  font-style: italic;
+}
+
+/* line 441, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion .experience {
+  margin: 20px 0;
+  border-bottom: 2px solid #66A7A5;
+  padding-bottom: 10px;
+}
+
+/* line 447, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion .expand {
+  padding: 10px 16px;
+  border-top: 2px dotted #DDDDDD;
+  margin-top: 15px;
+}
+
+/* line 453, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion .experience:not(:hover) .expand {
+  font-size: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  /* fade out, then shrink */
+  transition: opacity .25s, font-size .5s .25s, margin .5s .25s, padding .5s .25s;
+}
+
+/* line 465, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.resume .accordion .experience:hover .expand {
+  /* unshrink, then fade in */
+  transition: font-size .25s, margin .25s, padding .25s, opacity .5s .25s;
+}
+
+/* line 475, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.gallery {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 480, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.gallery div {
+  width: 31.3%;
+  height: 250px;
+  margin: 1%;
+  box-shadow: 1px 1px 6px #D8D8D8, -1px -1px 6px #D8D8D8;
+  transition: all .5s 0s;
+}
+
+/* line 487, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.gallery div:hover {
+  transform: scale(1.04);
+  z-index: 1000;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* line 495, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* line 502, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.hi {
+  margin: 30px 0;
+}
+
+/* line 506, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.personal-heading {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+/* line 511, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.personal-heading .personal-name {
+  height: 200px;
+  width: 50%;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 521, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.personal-heading #la, .personal-heading #seattle, .personal-heading #bujo {
+  background-image: url("../images/p_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* line 528, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.personal-heading #seattle {
+  background-image: url("../images/p_2.jpg");
+}
+
+/* line 533, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.personal-heading #bujo {
+  background-image: url("https://66.media.tumblr.com/a2e711ffd08d0bd6b1c9a46a378fd2c5/tumblr_pfqm4xvCuD1wtldnpo6_r1_1280.jpg");
+}
+
+/* line 538, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.personal-heading .personal-desc {
+  width: 44%;
+  margin: 0 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 548, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.interactive.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* line 553, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.interactive.buttons p, .interactive.buttons .description h2, .description .interactive.buttons h2 {
+  width: 49%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 15px;
+  border: 2.5px solid #66A7A5;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s 0s;
+}
+
+/* line 564, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.interactive.buttons p:hover, .interactive.buttons .description h2:hover, .description .interactive.buttons h2:hover {
+  background-color: #66A7A5;
+  color: white;
+}
+
+/* line 571, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.interactive .personal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: all .5s 0s;
+  margin: 15px 0;
+}
+
+/* line 580, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+.interactive .personal-content img, .interactive .personal-content p, .interactive .personal-content .description h2, .description .interactive .personal-content h2 {
+  width: 49%;
+  height: 100%;
+}
+
+/* line 587, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+/* line 592, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact form {
+  margin-right: 5%;
+  width: 45%;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 599, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact input {
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+/* line 605, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact input:focus {
+  outline: none;
+  border-bottom: 2px solid #66A7A5;
+}
+
+/* line 611, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact input[type=checkbox] {
+  margin: 0 5px 0 30px;
+}
+
+/* line 615, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact .row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 621, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact .label {
+  font-weight: bold;
+}
+
+/* line 625, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact textarea {
+  width: 100%;
+  height: 15vh;
+}
+
+/* line 629, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact textarea:focus {
+  outline: none;
+  border: 2px solid #66A7A5;
+}
+
+/* line 635, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact .center {
+  justify-content: center;
+}
+
+/* line 639, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact button {
+  margin: 0 10px;
+}
+
+/* line 643, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact iframe {
+  width: 50%;
+  height: auto;
+  border: 0;
+}
+
+/* line 650, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+#contact-confirmation {
+  height: 83vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 663, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+footer #left {
+  float: left;
+}
+
+/* line 667, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+footer #right {
+  float: right;
+}
+
+/* line 671, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+footer a {
+  margin: 0 10px;
+}
+
+/* line 675, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+footer p, footer .description h2, .description footer h2 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  /* line 681, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #sidebar-top {
+    display: initial;
+  }
+  /* line 685, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #container {
+    margin-top: 60px;
+  }
+  /* line 689, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .content-container {
+    overflow: initial;
+    height: initial;
+  }
+  /* line 694, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #sidebar-lg {
+    display: none;
+  }
+  /* line 699, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .gallery div {
+    width: 48%;
+  }
+  /* line 704, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  footer {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 710, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .content-container {
+    margin: 0 20px;
+  }
+  /* line 714, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .search form button {
+    margin-left: 10px;
+  }
+  /* line 718, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #introduction {
+    flex-direction: column;
+  }
+  /* line 721, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #introduction div:nth-child(2) {
+    margin: 30px 0 0 0;
+  }
+  /* line 726, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #explore-links {
+    flex-wrap: wrap;
+  }
+  /* line 729, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #explore-links a {
+    width: 100%;
+    margin: 5px 0;
+  }
+  /* line 735, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #index-contact {
+    text-align: left;
+  }
+  /* line 738, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #index-contact #contact-flex {
+    text-align: left;
+    flex-wrap: wrap;
+  }
+  /* line 742, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #index-contact #contact-flex div {
+    width: 100%;
+    margin: 5px 0;
+  }
+  /* line 746, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #index-contact #contact-flex div:nth-child(1) {
+    margin-top: 0;
+  }
+  /* line 750, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #index-contact #contact-flex div:nth-child(2) {
+    margin-top: 40px;
+  }
+  /* line 759, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #background-info #clickable-boxes .click {
+    width: 50px;
+  }
+  /* line 765, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .resume {
+    flex-direction: column;
+  }
+  /* line 768, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .resume .accordion {
+    width: 100%;
+  }
+  /* line 774, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .gallery div {
+    width: 100%;
+    margin: 2% 0;
+  }
+  /* line 780, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #contact {
+    flex-direction: column;
+  }
+  /* line 783, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #contact form {
+    width: 100%;
+    padding-right: 20px;
+  }
+  /* line 788, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  #contact iframe {
+    width: 100%;
+    height: 45vh;
+    margin-top: 30px;
+  }
+  /* line 795, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .personal-heading {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  /* line 799, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .personal-heading .personal-desc, .personal-heading .personal-name {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 804, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .personal-heading p, .personal-heading .description h2, .description .personal-heading h2 {
+    margin: 20px 0;
+  }
+  /* line 808, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .personal-heading #seattle {
+    order: -1;
+  }
+  /* line 815, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .interactive.buttons p, .interactive.buttons .description h2, .description .interactive.buttons h2 {
+    width: 100%;
+  }
+  /* line 820, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .interactive .personal-content {
+    margin: 0;
+  }
+  /* line 823, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .interactive .personal-content img, .interactive .personal-content p, .interactive .personal-content .description h2, .description .interactive .personal-content h2 {
+    width: 100%;
+  }
+  /* line 827, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  .interactive .personal-content p, .interactive .personal-content .description h2, .description .interactive .personal-content h2 {
+    margin-top: 10px;
+  }
+  /* line 834, /Users/yueqi/Desktop/USC Spring 2019/ITP 302/final_project/sass/style.scss */
+  footer a {
+    margin: 0 2px;
+  }
+}
+
+/*# sourceMappingURL=../css/style.map */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Yueqi Huang | Contact Confirmation </title>
+
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="images/logo-icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Karla|Crete+Round" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+	<meta name="description" content="Confirmed! Your request has been received.">
+</head>
+
+<body>
+	<div id="sidebar-top">
+		<img src="images/logo-icon.png" alt="logo icon">
+		<h3><a href="index.html"> Yueqi Huang </a></h3>
+	</div>
+
+	<div id="container">
+
+	<div id="sidebar-sm-wrapper">
+		<div id="sidebar-sm">
+		<a href="javascript:void(0)" id="closebtn">close</a>
+		<h2> Navigation </h2>
+		<ul class="navigation">
+			<li><a href="about.html"> About </a></li>
+			<li>
+				<a href="#" class="works"> Works </a>
+				<ul>
+					<li><a href="graphic_design.html"> Graphic Design </a></li>
+					<li><a href="photography.html"> Photography </a></li>
+				</ul>
+			</li>
+			<li><a href="personal.html"> Personal </a></li>
+			<li><a href="contact.html"> Contact </a></li>
+		</ul>
+
+		<div class="search">
+  			<form class="form-inline">
+	   			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	    		<button type="submit">Go</button>
+ 			 </form>
+		</div>
+		</div>
+	</div>
+
+	<div id="sidebar-lg">
+		<div class="search">
+  			<form class="form-inline">
+	   			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	    		<button type="submit">Go</button>
+ 			 </form>
+		</div>
+
+		<ul class="navigation">
+			<li><a href="about.html"> About </a></li>
+			<li>
+				<a href="#" class="works"> Works </a>
+				<ul>
+					<li><a href="graphic_design.html"> Graphic Design </a></li>
+					<li><a href="photography.html"> Photography </a></li>
+				</ul>
+			</li>
+			<li><a href="personal.html"> Personal </a></li>
+			<li><a href="contact.html"> Contact </a></li>
+		</ul>
+
+		<div id="name">
+			<h1><a href="index.html"> Yueqi <br> Huang </a></h1>
+		</div>
+	</div>
+
+	<div class="content-container">
+	<div class="content">
+
+	<div id="contact-confirmation">
+		<h3> Thank you! Your inquiry has been received. </h3>
+		<p> You should expect to hear back in 48 hours. </p>
+	</div>
+
+	<footer>
+		<hr>
+		<div id="left">
+			<p> &copy; Yueqi Huang 2019. All rights reserved. </p>
+		</div>
+
+		<div id="right">
+			<a href="https://www.instagram.com/yq808/" target="_blank" class="fa fa-instagram"></a>
+			<a href="https://www.linkedin.com/in/yueqi-huang-808/" target="_blank" class="fa fa-linkedin"></a>
+		</div>
+	</footer>
+
+	</div>
+	</div>
+
+	</div>
+
+	<script>
+		document.querySelector("#sidebar-top img").onclick = function() {
+  			document.querySelector("#sidebar-sm-wrapper").style.width = "260px";
+		}
+
+		document.querySelector("#closebtn").onclick = function() {
+  			document.querySelector("#sidebar-sm-wrapper").style.width = "0";
+		}
+
+		window.addEventListener("resize", function() {
+			if(window.innerWidth > 991){
+				document.querySelector("#sidebar-sm-wrapper").style.width = "0";
+			}
+		})
+	</script>
+</body>
+</html>
