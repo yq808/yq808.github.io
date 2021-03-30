@@ -252,13 +252,13 @@
 			var url;
 
 			if (type == "general") {
-				url = "https://www.googleapis.com/books/v1/volumes?q=" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+				url = "https://www.googleapis.com/books/v1/volumes?q=" + search + "&callback=myCallback&key=AIzaSyDKLl1iPuyvCVZx7beAs8nL_VWbJxit3Pk&maxResults=20";
 			} else if (type == "title") {
-				url = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+				url = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + search + "&callback=myCallback&key=AIzaSyDKLl1iPuyvCVZx7beAs8nL_VWbJxit3Pk&maxResults=20";
 			} else if (type == "author") {
-				url = "https://www.googleapis.com/books/v1/volumes?q=+inauthor:" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+				url = "https://www.googleapis.com/books/v1/volumes?q=+inauthor:" + search + "&callback=myCallback&key=AIzaSyDKLl1iPuyvCVZx7beAs8nL_VWbJxit3Pk&maxResults=20";
 			} else if (type == "genre") {
-				url = "https://www.googleapis.com/books/v1/volumes?q=+subject:" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+				url = "https://www.googleapis.com/books/v1/volumes?q=+subject:" + search + "&callback=myCallback&key=AIzaSyDKLl1iPuyvCVZx7beAs8nL_VWbJxit3Pk&maxResults=20";
 			}
 
 			if (search.length > 0) {
