@@ -1,0 +1,57 @@
+@import "partial";
+
+.breadcrumb {
+	width: 60%;
+	margin: 10px auto;
+}
+
+.form-wrap {
+	width: 60%;
+	margin: 30px auto;
+	border: 2px solid $backgroundColor;
+	border-radius: 20px;
+
+	form {
+		width: 50%;
+		margin: 0 auto;
+		padding: 40px;
+
+		.form-row {
+			margin: 30px 0;
+		}
+
+		#button-row {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 0;
+
+			button {
+				margin: 0 15px;
+			}
+		}
+
+		label {
+			display: block;
+			font-family: $headerFont;
+		}
+
+		input {
+			width: 100%;
+		}
+
+		.select-css {
+			padding: 5px 0;
+			background-color: $lightgrey;
+			border-radius: 5px;
+
+			select {
+				margin-top: 15px;
+				font-size: 16px;
+				font-family: $bodyFont;
+				width: 100%;
+				border: none;
+			}
+		}
+	}
+
+}

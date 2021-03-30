@@ -1,0 +1,56 @@
+<header>
+		<div id="logo">
+			<a href="index.php"> The LA Explorer </a>
+		</div>
+
+		<div id="nav-links">
+			<a href="index.php"> Home </a>
+			<a href="search_form.php"> Browse </a>
+			<a href="add_form.php"> Add Location </a>
+			<a href="favorites.php"> Favorites </a>
+		</div>
+
+		<div id="login">
+			<?php if (empty($_SESSION['logged_in'])): ?>
+
+				<a href="#ex1" rel="modal:open"> Login </a>
+
+			<?php else: ?>
+
+				<span id="hi-username">Hi <?php echo $_SESSION['username']; ?>!</span>
+				<a href="index.php?logout=true"> Logout </a>
+
+			<?php endif; ?>
+		</div>
+</header>
+
+<div id="ex1" class="modal">
+  	<div class="form-wrap login">
+		<form action="index.php" method="POST">
+			<div class="form-row">
+				<label for="username"> Username: </label>
+				<input type="text" id="username" name="username">
+			</div>
+
+			<div class="form-row">
+				<label for="password"> Password: </label>
+				<input type="password" id="password" name="password">
+			</div>
+
+			<div class="form-row button-row">
+				<button type="submit" class="button red-button"> Log In </button>
+				<button type="reset" class="button white-button"> Clear </button>
+			</div>
+		</form>
+
+		<p> Don't have an account? Register <a href="register.php" class="website-link"> here</a>.</p>
+	</div>
+</div>
+
+
+<?php if (!empty($errorLogin)): ?>
+	<section class="fail-popup">
+		<p><?php echo $errorLogin; ?></p>
+		<a class="website-link" href="index.php"> Dismiss </a>
+	</section>
+<?php endif; ?>
