@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Bookmark | Your Lists </title>
+
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="links/logo-icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<!-- Modal -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/list.css">
+
+	<!-- Font -->
+	<link rel="stylesheet" href="https://use.typekit.net/nad3zzz.css">
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="description" content="Create your reading list.">
+</head>
+<body>
+
+	<header>
+		<div id="banner">
+			<span class="banner-div">
+				<a href="index.html"><img src="links/logo.png" alt="logo"></a>
+			</span>
+
+			<h1><a href="index.html"> Bookmark </a></h1>
+
+			<p class="banner-div">
+				5931 Franklin Avenue <br>
+				Los Angeles, California, 90028
+				<a href="index.html" target="_blank" class="fa fa-facebook"></a>
+				<a href="index.html" target="_blank" class="fa fa-instagram"></a>
+				<a href="index.html" target="_blank" class="fa fa-twitter"></a>
+			</p>
+		</div>
+	</header>
+
+	<div id="nav-header">
+		<div id="links">
+			<a href="index.html"> Home </a>
+			<a href="about.html"> About Us </a>
+			<a href="library.html"> The Library </a>
+			<a href="list.html"> Your Lists </a>
+		</div>
+	</div>
+
+	<section class="section" id="list">
+		<div class="introduction">
+			<h2> Build A List </h2>
+			<p> Create a world of literature unique to you. Add to the list or start anew. </p>
+		</div>
+
+		<div id="list-header">
+			<h2> Your Reading List </h2>
+			<button class="button" id="clear-list"> Clear All </button>
+		</div>
+
+		<div class="books-list" id="books-list-bold">
+			<div class="list-row">
+				<p> Cover </p>
+				<p> Title </p>
+				<p> Author </p>
+				<p> Genre </p>
+				<p> Rating </p>
+				<p> View on Google Books </p>
+				<span></span>
+			</div>
+		</div>
+
+		<hr>
+
+		<p id="empty-list"> Your list is empty! Head over to <a href="library.html"> the libary</a> to start adding books to your reading list. </p>
+
+		<div class="books-list" id="content">
+
+		</div>
+	</section>
+
+
+
+	<footer>
+		<div id="subscription">
+			<div>
+				<h3> Stay Updated </h3>
+				<p> Join the mailing list to get updates about new releases and upcoming events. </p>
+			</div>
+
+			<form id="email-form">
+				<label for="sub-email"> Email: </label>
+				<input id="sub-email" type="text" name="email" placeholder="example@email.com">
+				<button class="button" type="submit"> Join </button>
+				<p class="form-msg" id="subscription-msg"></p>
+			</form>
+		</div>
+
+		<div id="nav-footer">
+			<div id="nav-logo">
+				<a href="index.html">
+					<img src="links/logo.png" alt="logo">
+				</a>
+				<a href="index.html">
+					<h1> Bookmark </h1>
+				</a>
+			</div>
+
+			<div class="nav-list">
+				<h3> Contact Us </h3>
+					5931 Franklin Avenue <br>
+					Los Angeles, California, 90028 <br>
+					+1 (213) 823-389 <br>
+					inquiries@bookmark.com
+			</div>
+
+			<div class="nav-list">
+				<h3> Social Media </h3>
+				<a href="index.html" target="_blank"> Instagram </a>
+				<a href="index.html" target="_blank"> Twitter </a>
+				<a href="index.html" target="_blank"> Facebook </a>
+			</div>
+		</div>
+
+		<p id="copyright"> Copyright &copy; 2019 Bookmark. All Rights Reserved. <a href="project_summary.html" target="_blank"> Project Summary </a></p>
+	</footer>
+
+
+
+	<script src="main.js"></script>
+
+	<script src="handlebars-v4.5.3.js"></script>
+
+	<script type="text/x-handlebars-template" id="handlebarsList">
+
+		{{#each .}}
+		<div class="list-row">
+			<div class="list-img">
+
+				{{#if volumeInfo.imageLinks.thumbnail}}
+					<img src="{{volumeInfo.imageLinks.thumbnail}}" alt="{{volumeInfo.title}} Cover">
+				{{else}}
+					<img src="links/unavailable2.png">
+				{{/if}}
+
+			</div>
+			<h4> {{volumeInfo.title}} </h4>
+			<p> {{volumeInfo.authors}} </p>
+			
+			{{#if volumeInfo.categories}}
+				<p> {{volumeInfo.categories}} </p>
+			{{else}}
+				<p> Unavailable </p>
+			{{/if}}
+
+			{{#if volumeInfo.averageRating}}
+				<p> {{volumeInfo.averageRating}} &starf; </p>
+			{{else}}
+				<p> Unavailable </p>
+			{{/if}}
+
+			<p><a class="button" href="{{volumeInfo.infoLink}}" target="_blank"> &rarr; </a></p>
+			<span class="deletebtn"> &times; </span>
+		</div>
+		{{/each}}
+
+	</script>
+
+	<script>
+
+		if (localStorage.getItem("books") === null) {
+			document.querySelector("#empty-list").style.display = "block";
+		} else {
+			var booksList = [];
+			booksList = JSON.parse(localStorage.getItem("books"));
+
+			var source = document.querySelector("#handlebarsList").innerHTML;
+			var template = Handlebars.compile(source);
+
+			document.querySelector("#content").innerHTML = template(booksList);
+
+			deleteBtns();
+		}
+
+		function deleteBtns() {
+			var deleteBtn = document.querySelectorAll(".deletebtn");
+
+			for (var i = 0; i < deleteBtn.length; i++) {
+				deleteBtn[i].setAttribute("btnLength", i);
+				deleteBtn[i].onclick = function() {
+					booksList;
+					var k = this.getAttribute("btnLength");
+					this.parentElement.remove();
+
+					booksList.splice(k, 1);
+					localStorage.setItem("books", JSON.stringify(booksList));
+
+					deleteBtns();
+
+					var listLength = document.querySelector("#content").innerHTML.trim();
+
+					if (listLength.length == 0) {
+						document.querySelector("#empty-list").style.display = "block";
+					}
+				}
+			}
+		}
+
+		deleteBtns();
+
+		document.querySelector("#clear-list").onclick = function() {
+			localStorage.clear();
+			document.querySelector("#content").innerHTML = "";
+			document.querySelector("#empty-list").style.display = "block";
+		}
+
+		var contentLength = document.querySelector("#content").innerHTML.trim();
+
+		if (contentLength.length == 0) {
+			document.querySelector("#empty-list").style.display = "block";
+		}
+	</script>
+
+</body>
+</html>

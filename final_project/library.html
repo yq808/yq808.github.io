@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Bookmark | The Library </title>
+
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="links/logo-icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<!-- Modal -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/library.css">
+
+	<!-- Font -->
+	<link rel="stylesheet" href="https://use.typekit.net/nad3zzz.css">
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="description" content="Search for new books to read, or look up books you're already curious about.">
+</head>
+<body>
+
+	<header>
+		<div id="banner">
+			<span class="banner-div">
+				<a href="index.html"><img src="links/logo.png" alt="logo"></a>
+			</span>
+
+			<h1><a href="index.html"> Bookmark </a></h1>
+
+			<p class="banner-div">
+				5931 Franklin Avenue <br>
+				Los Angeles, California, 90028
+				<a href="index.html" target="_blank" class="fa fa-facebook"></a>
+				<a href="index.html" target="_blank" class="fa fa-instagram"></a>
+				<a href="index.html" target="_blank" class="fa fa-twitter"></a>
+			</p>
+		</div>
+	</header>
+
+	<div id="nav-header">
+		<div id="links">
+			<a href="index.html"> Home </a>
+			<a href="about.html"> About Us </a>
+			<a href="library.html"> The Library </a>
+			<a href="list.html"> Your Lists </a>
+		</div>
+	</div>
+
+	<section class="section" id="search">
+		<div class="introduction">
+			<h2> An Extensive Library </h2>
+			<p> Search for books in general or according to genre, author, or title. </p>
+		</div>
+
+		<div id="library-form">
+			<form id="search-form">
+				<input id="search-keyword" type="text" name="search" placeholder="Keyword">
+
+				<span class="select-css">
+					<select id="search-type" name="type">
+						<option value="general"> General </option>
+						<option value="title"> Title </option>
+						<option value="author"> Author </option>
+						<option value="genre"> Genre </option>
+					</select>
+				</span>
+
+				<button class="button" type="submit" id="go-button"> Go </button>
+				<button class="button" type="reset"> Clear </button>
+			</form>
+
+			<p class="form-msg" id="search-msg"></p>
+
+			<div id="recommended-search">
+				<span> Harry Potter </span>
+				<span> Graphic Novel </span>
+				<span> Khaled Hosseini </span>
+				<span> Catch-22 </span>
+				<span> Rainbow Rowell </span>
+				<span> Science Fiction </span>
+				<span> Haruki Murakami </span>
+			</div>
+		</div>
+
+		<div id="search-results">
+
+		</div>
+	</section>
+
+
+	<footer>
+		<div id="subscription">
+			<div>
+				<h3> Stay Updated </h3>
+				<p> Join the mailing list to get updates about new releases and upcoming events. </p>
+			</div>
+
+			<form id="email-form">
+				<label for="sub-email"> Email: </label>
+				<input id="sub-email" type="text" name="email" placeholder="example@email.com">
+				<button class="button" type="submit"> Join </button>
+				<p class="form-msg" id="subscription-msg"></p>
+			</form>
+		</div>
+
+		<div id="nav-footer">
+			<div id="nav-logo">
+				<a href="index.html">
+					<img src="links/logo.png" alt="logo">
+				</a>
+				<a href="index.html">
+					<h1> Bookmark </h1>
+				</a>
+			</div>
+
+			<div class="nav-list">
+				<h3> Contact Us </h3>
+					5931 Franklin Avenue <br>
+					Los Angeles, California, 90028 <br>
+					+1 (213) 823-389 <br>
+					inquiries@bookmark.com
+			</div>
+
+			<div class="nav-list">
+				<h3> Social Media </h3>
+				<a href="index.html" target="_blank"> Instagram </a>
+				<a href="index.html" target="_blank"> Twitter </a>
+				<a href="index.html" target="_blank"> Facebook </a>
+			</div>
+		</div>
+
+		<p id="copyright"> Copyright &copy; 2019 Bookmark. All Rights Reserved. <a href="project_summary.html" target="_blank"> Project Summary </a></p>
+	</footer>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+
+	<script src="main.js"></script>
+
+	<script src="handlebars-v4.5.3.js"></script>
+
+	<script type="text/x-handlebars-template" id="handlebarsLibrary">
+
+		{{#each .}}
+		<a class="modal-button open-modal indiv-result" rel="modal:open" href="#{{id}}">
+			<div class="lib-img">
+				
+				{{#if volumeInfo.imageLinks.thumbnail}}
+					<img src="{{volumeInfo.imageLinks.thumbnail}}" alt="{{volumeInfo.title}} Cover">
+				{{else}}
+					<img src="links/unavailable2.png">
+				{{/if}}
+
+			</div>
+			<h4> {{volumeInfo.title}} </h4>
+			<span> {{volumeInfo.authors.[0]}} </span>
+
+			{{#if volumeInfo.averageRating}}
+				<span> Rating: {{volumeInfo.averageRating}} &starf; </span>
+			{{else}}
+				<span> Rating: Unavailable </span>
+			{{/if}}
+
+			<div><span class="read-more"> Read More </span></div>
+		</a>
+
+		<div class="modal" id="{{id}}">
+			<h3> {{volumeInfo.title}} </h3>
+			<div class="modal-flex">
+				<div class="modal-img">
+					{{#if volumeInfo.imageLinks.thumbnail}}
+						<img src="{{volumeInfo.imageLinks.thumbnail}}" alt="{{volumeInfo.title}} Cover">
+					{{else}}
+						<img src="links/unavailable2.png">
+					{{/if}}
+				</div>
+
+				<div class="modal-brief">
+					{{#if volumeInfo.averageRating}}
+						<p><span class="rating-button"> <span class="rating">Rating:</span> {{volumeInfo.averageRating}} &starf; </span></p>
+					{{else}}
+						<p><span class="rating-button"> <span class="rating">Rating:</span> Unavailable </span></p>
+					{{/if}}
+
+					<div class="modal-grey">
+						<h4> Description </h4>
+						{{#if volumeInfo.description}}
+							<p> {{volumeInfo.description}} </p>
+						{{else}}
+							<p> Description unavailable. </p>
+						{{/if}}
+					</div>
+
+					<p> <span class="rating">Author:</span>
+						{{#each volumeInfo.authors}}{{#if @index}}, {{/if}}{{this}}{{/each}}
+					</p>
+					<p> <span class="rating">Date Published:</span> {{volumeInfo.publishedDate}} </p>
+					
+					{{#if volumeInfo.categories}}
+						<p> <span class="rating">Genre:</span> {{volumeInfo.categories}} </p>
+					{{else}}
+						<p> <span class="rating">Genre:</span> Unavailable </p>
+					{{/if}}
+
+					{{#if volumeInfo.pageCount}}
+						<p> <span class="rating">Page Count:</span> {{volumeInfo.pageCount}} </p>
+					{{else}}
+						<p> <span class="rating">Page Count: Unavailable</span> </p>
+					{{/if}}
+					
+					{{#if volumeInfo.industryIdentifiers.0.identifier}}
+						<p> <span class="rating">ISBN:</span> {{volumeInfo.industryIdentifiers.0.identifier}} </p>
+					{{else}}
+						<p> <span class="rating">ISBN:</span> Unavailable </p>
+					{{/if}}
+					
+					<hr>
+
+					<a class="button" href="{{volumeInfo.infoLink}}" target="_blank"> Find on Google Books </a>
+					<p class="savebtn button" bookid="{{id}}"> Save Book </p>
+					<a class="button" href="list.html"> Go to List </a>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+
+	</script>
+
+	<script>
+		$.modal.defaults = {
+			showClose: false,
+			clickClose: true,
+			escapeClose: true,
+			fadeDuration: 100,
+		}
+
+		document.querySelector("#search-form").onsubmit = function() {
+			var search = document.querySelector("#search-keyword").value.trim();
+
+			var type = document.querySelector("#search-type").value.trim();
+
+			var url;
+
+			if (type == "general") {
+				url = "https://www.googleapis.com/books/v1/volumes?q=" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+			} else if (type == "title") {
+				url = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+			} else if (type == "author") {
+				url = "https://www.googleapis.com/books/v1/volumes?q=+inauthor:" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+			} else if (type == "genre") {
+				url = "https://www.googleapis.com/books/v1/volumes?q=+subject:" + search + "&callback=myCallback&=AIzaSyDaIyrBHukBVzeXokKIAQu4BDRCFckab0g&maxResults=20";
+			}
+
+			if (search.length > 0) {
+				var script = document.createElement("script");
+				script.src = url;
+
+				document.body.appendChild(script);
+
+				document.querySelector("#search-results").classList.add("active");
+
+				document.querySelector("#search-msg").innerHTML = "";
+			} else {
+				document.querySelector("#search-msg").innerHTML = "Invalid search!";
+			}
+
+
+			document.querySelector("#search-keyword").value = "";
+			var type = document.querySelector("#search-type").value = "general";
+
+			return false;
+		}
+
+		var libraryBooks;
+
+		var books;
+
+		if (localStorage.getItem("books") === null) {
+			books = [];
+		} else {
+			books = JSON.parse(localStorage.getItem("books"));
+		}
+
+		function myCallback(data) {
+			libraryBooks = data.items;
+
+			document.querySelector("#search-results").innerHTML = "";
+
+			if (libraryBooks == undefined) {
+				var undefinedError = document.createElement("p");
+				undefinedError.classList.add("undefined-error");
+				undefinedError.innerHTML = "There has been an error. Check back again later!";
+				document.querySelector("#search-results").appendChild(undefinedError);
+			} else {
+				var source = document.querySelector("#handlebarsLibrary").innerHTML;
+				var template = Handlebars.compile(source);
+
+				document.querySelector("#search-results").innerHTML = template(data.items);
+
+				var saveBtn = document.querySelectorAll(".savebtn");
+				for (var i = 0; i < saveBtn.length; i++) {
+					var saved = false;
+
+					saveBtn[i].setAttribute("index", i);
+
+					for (var k = 0; k < books.length; k++) {
+						if (saveBtn[i].getAttribute('bookid') == books[k].id) {
+							saveBtn[i].innerHTML = "Book Already Saved";
+						}
+					}
+
+					saveBtn[i].onclick = function() {
+						var j = this.getAttribute("index");
+
+						var savedBook = libraryBooks[j].id;
+
+						for (m = 0; m < books.length; m++) {
+							var present = books[m].id == savedBook;
+							if (present) {
+								break;
+							}
+						}
+
+						if (present) {
+							saveBtn[j].innerHTML = "Book Already Saved";
+						} else {
+							books.push(libraryBooks[j]);
+							saveBtn[j].innerHTML = "Book Saved";
+						}
+
+						localStorage.setItem("books", JSON.stringify(books));
+					}
+				}
+			}
+		}
+
+		var recommendedBtn = document.querySelectorAll("#recommended-search span");
+		for (var k = 0; k < recommendedBtn.length; k++) {
+			recommendedBtn[k].onclick = function() {
+				var recommended = this.innerHTML;
+
+				document.querySelector("#search-keyword").value = recommended;
+				document.querySelector("#search-type").value = "general";
+
+				document.querySelector("#go-button").click();
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Bookmark | Project Summary </title>
+
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="links/logo-icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="stylesheet" href="https://use.typekit.net/nad3zzz.css">
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="description" content="ITP 301 final project summary.">
+
+	<style>
+		#project-summary a {
+			border-bottom: 2px solid #F0C445;
+			box-shadow: inset 0 -4px 0 #F0C445;
+		}
+
+		#project-summary a:hover {
+			background-color: #F0C445;
+		}
+
+		#project-summary h4 {
+			color: #F0C445;
+			font-size: 18px;
+			font-weight: 300;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<div id="banner">
+			<span class="banner-div">
+				<a href="index.html"><img src="links/logo.png" alt="logo"></a>
+			</span>
+
+			<h1><a href="index.html"> Bookmark </a></h1>
+
+			<p class="banner-div">
+				5931 Franklin Avenue <br>
+				Los Angeles, California, 90028
+				<a href="index.html" target="_blank" class="fa fa-facebook"></a>
+				<a href="index.html" target="_blank" class="fa fa-instagram"></a>
+				<a href="index.html" target="_blank" class="fa fa-twitter"></a>
+			</p>
+		</div>
+	</header>
+
+	<div id="nav-header">
+		<div id="links">
+			<a href="index.html"> Home </a>
+			<a href="about.html"> About Us </a>
+			<a href="library.html"> The Library </a>
+			<a href="list.html"> Your Lists </a>
+		</div>
+	</div>
+
+	<section class="section" id="project-summary">
+
+		<h2> ITP 301 Project Summary </h2>
+
+		<h4> Topic & Purpose </h4>
+		<p>
+			The website I created is a "online library" of sorts. By using an API to display books and implementing it in different ways on the site, users are not only able to discover new books that they can add to their reading list, but also to search up books and learn more about them. I hope that through this site, users can expand their breadth and depth of books they have read.
+		</p>
+
+		<h4> Navigation </h4>
+		<p>
+			On the home page, users can look through new releases in the categories of fantasy, graphic novel, and biography/autobiography. The books displayed are subject to change as they are ordered by newest releases first. There are also brief descriptions of and links to the other pages on the site. The "About Us" page explains the purpose behind the website and contains a contact form. On the "The Library" page, users can search for books by inputting a keyword and selecting in what category (general, title, author, genre) they want to perform the search. There are a few recommended search buttons directly below the search form. Clicking on the "Read More" button gives the users more information on the book and options to view on Google Books, save to a list, and go to the list. Users are able to save books they're interested in and find them compiled in a list on the "Your Lists" page. There, they can customize the list by adding and deleting items.
+		</p>
+
+		<h4> Extras </h4>
+		<p>
+			I used the <a href="https://developers.google.com/books/docs/overview" target="_blank">Google Books API</a> to provide the search results for the books. This can be seen on the home page where it loads the newest releases in fantasy, graphic novels, and biographies/autobiographies, and in the library page where users can search for books by defining two parameters of search term and category. When users click on the "save book" button, the book is saved into local storage and accessed via local storage to load them onto the list page. Users can exit and refresh the page but still have their saved books available the next time they visit the site. DOM manipulation can be seen on the "Your Lists" page, where users can delete items on the list and add items by adding them on other pages. Whenever users click on the "Read More" button, it opens up a modal with more information, which is done through a <a href="https://jquerymodal.com/" target="_blank"> jQuery plugin</a>.
+		</p>
+
+	</section>
+
+	<footer>
+		<div id="subscription">
+			<div>
+				<h3> Stay Updated </h3>
+				<p> Join the mailing list to get updates about new releases and upcoming events. </p>
+			</div>
+
+			<form id="email-form">
+				<label for="sub-email"> Email: </label>
+				<input id="sub-email" type="text" name="email" placeholder="example@email.com">
+				<button class="button" type="submit"> Join </button>
+				<p class="form-msg" id="subscription-msg"></p>
+			</form>
+		</div>
+
+		<div id="nav-footer">
+			<div id="nav-logo">
+				<a href="index.html">
+					<img src="links/logo.png" alt="logo">
+				</a>
+				<a href="index.html">
+					<h1> Bookmark </h1>
+				</a>
+			</div>
+
+			<div class="nav-list">
+				<h3> Contact Us </h3>
+					5931 Franklin Avenue <br>
+					Los Angeles, California, 90028 <br>
+					+1 (213) 823-389 <br>
+					inquiries@bookmark.com
+			</div>
+
+			<div class="nav-list">
+				<h3> Social Media </h3>
+				<a href="index.html" target="_blank"> Instagram </a>
+				<a href="index.html" target="_blank"> Twitter </a>
+				<a href="index.html" target="_blank"> Facebook </a>
+			</div>
+		</div>
+
+		<p id="copyright"> Copyright &copy; 2019 Bookmark. All Rights Reserved. <a href="project_summary.html" target="_blank"> Project Summary </a></p>
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+</html>

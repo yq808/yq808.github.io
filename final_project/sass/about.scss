@@ -1,0 +1,66 @@
+@import "partial";
+
+#about {	
+	h3 {
+		font-size: 22px;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+#contact {
+	display: flex;
+
+	h3 {
+		font-size: 22px;
+	}
+
+	img, #contact-flex {
+		width: 50%;
+	}
+
+	#contact-flex {
+		padding-right: 20px;
+		box-sizing: border-box;
+
+		#success-msg {
+			font-size: 20px;
+			font-weight: $bold;
+		}
+	}
+}
+
+#contact-form {
+	.form-row {
+	    display: flex;
+	    flex-direction: column;
+	}
+
+	.center {
+		display: inline-block;
+	}
+
+	label {
+		margin-bottom: 10px;
+		font-weight: $bold;
+		font-size: 17px;
+	}
+
+	input {
+		padding: 10px;
+	    box-sizing: border-box;
+	    border: none;
+	    border-bottom: 1px solid $black;
+	    width: 85%;
+	}
+
+	textarea {
+		 width: 81%;
+		height: 15vh;
+		padding: 10px;
+		font-family: $bodyFont;
+		font-size: 16px;
+	}
+}
