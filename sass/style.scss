@@ -584,6 +584,11 @@ a .button, button {
 	}
 }
 
+.web-design h2 {
+	color: $accentColor;
+	text-align: center;
+}
+
 #contact {
 	display: flex;
 	flex-wrap: wrap;
@@ -645,6 +650,11 @@ a .button, button {
 		height: auto;
 		border: 0;
 	}
+}
+
+#link_highlight {
+	text-decoration: underline;
+	font-weight: bold;
 }
 
 #contact-confirmation {
