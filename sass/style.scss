@@ -7,6 +7,9 @@ $bodyFont: 'Karla', sans-serif;
 $logoFont: couture, sans-serif;
 $headerFont: 'Crete Round', serif;
 
+$lightGrey: #DFE7E2;
+$grey: #CCC;
+
 // Font
 @font-face {
 	font-family: "couture";
@@ -470,6 +473,26 @@ a .button, button {
 			            opacity .5s .25s;
 		}
 	}
+}
+
+.project-container {
+    padding: 30px 20px;
+    margin: 40px 0;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px $lightGrey;
+
+    &:nth-child(2n) {
+        background-color: $lightGrey;
+        box-shadow: 7px 7px 20px $grey;
+    }
+}
+
+#quicklinks {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    font-family: $logoFont;
+    font-size: 16px;
 }
 
 .gallery {
