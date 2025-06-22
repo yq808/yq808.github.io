@@ -1,1 +1,277 @@
-@font-face{font-family:"couture";src:url("couture.otf")}@keyframes reveal{0%{opacity:0}100%{opacity:1}}html,body{margin:0;padding:0;font-family:"Karla",sans-serif;color:#111;animation:reveal 2.5s 0s;animation-fill-mode:forwards}a{text-decoration:none;color:#111}a:hover{color:#D75847;transition:all .3s 0s;text-decoration:none}h1,h2,h3{font-family:"Crete Round",serif}hr{border-color:#111}#container{margin:30px 0;display:flex}#sidebar-lg{height:100%;flex-grow:1;margin:0 30px}#sidebar-lg #search{padding-top:90px;margin-left:10px}#sidebar-lg #search .bg-light{background-color:transparent !important}#sidebar-lg #search input{width:140px}#sidebar-lg #navigation{padding-top:100px;box-sizing:border-box;padding-left:0}#sidebar-lg a{font-size:20px;line-height:28px;margin-left:10px;display:block}#sidebar-lg #name a{padding-top:125px;font-family:couture,sans-serif;font-size:70px;font-style:italic;line-height:70px}#sidebar-top{display:none;position:fixed;background-color:white;width:100%;z-index:1000;top:0;padding:0 30px}#sidebar-top img{width:70px;float:left;cursor:pointer}#sidebar-top h3{font-family:couture,sans-serif;font-style:italic;float:right;line-height:70px;margin:0}ul{list-style:none}#sidebar-sm-wrapper{height:120%;padding-top:95px;width:0;position:fixed;top:-10px;z-index:100;background-color:white;overflow-x:hidden;transition:all 0.7s 0s}#sidebar-sm-wrapper #sidebar-sm{padding-left:20px}#sidebar-sm-wrapper #closebtn{position:relative;right:-155px;margin-bottom:20px}#sidebar-sm-wrapper #search{margin-top:20px}#sidebar-sm-wrapper #search .bg-light{background-color:transparent !important}#sidebar-sm-wrapper #search input{width:140px}#sidebar-sm-wrapper #navigation{margin-top:20px;padding-left:0}#sidebar-sm-wrapper a{font-size:18px;line-height:26px}.content-container{flex-grow:6;overflow-y:scroll;height:91.5vh;margin:0 30px;width:100%;box-sizing:border-box}.content{width:100%;max-width:1000px;margin-left:auto;margin-right:auto}section{margin:40px 0}a .button,button{display:inline;font-size:18px;border:2px solid #111;border-radius:20px;box-sizing:border-box;padding:5px 12px}a .button:hover,button:hover{border:2px solid #D75847;background-color:#D75847;color:white;transition:all .3s 0s}#carousel{margin-top:0}#introduction{display:flex;align-items:center}#introduction img{width:100%;min-width:200px}#introduction div:nth-child(1){width:100%;flex-grow:1}#introduction div:nth-child(2){margin-left:40px;flex-grow:2}#explore h2{text-align:center}#explore #explore-links{display:flex;justify-content:space-around;margin:20px 0}#explore a{width:31%;margin:0 1%;font-size:23px;text-align:center;line-height:62px;box-sizing:border-box}#explore a:nth-child(1){color:#3AB8D6;border:3px solid #3AB8D6}#explore a:nth-child(1):hover{background-color:#3AB8D6;color:white}#explore a:nth-child(2){color:#D75847;border:3px solid #D75847}#explore a:nth-child(2):hover{background-color:#D75847;color:white}#explore a:nth-child(3){color:#F5D741;border:3px solid #F5D741}#explore a:nth-child(3):hover{background-color:#F5D741;color:white}#index-contact{text-align:center;position:relative}#index-contact #contact-flex{text-align:right;display:flex;align-items:center}#index-contact #contact-flex div{width:31%;margin:0 1%}#index-contact img{width:100%}.description{display:flex;align-items:center;justify-content:center;flex-direction:column;background-image:url("../images/charles.jpg");background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:350px}.description h2,.description p{width:85%;margin-left:auto;margin-right:auto;text-align:center}@keyframes slide-right{0%{opacity:0}100%{transform:translate(200px, 0);opacity:1}}@keyframes slide-left{0%{opacity:0}100%{transform:translate(-200px, 0);opacity:1}}.dramatic{margin:30px auto;width:80%}#experience-desc{text-align:center;margin:0 auto}.resume{display:flex;align-items:center;justify-content:center;margin:30px 0}.resume h3{width:30%;text-align:center;margin:0}.resume .accordion{width:70%;margin:10px 0}.resume .accordion ul{padding:0}.resume .accordion ul ul{list-style-type:disc}.resume .accordion h5{font-size:16px;cursor:pointer;font-weight:bold}.resume .accordion p{margin:0;font-style:italic}.resume .accordion .experience{margin:20px 0;border-bottom:2px solid #DFE7E2;padding-bottom:10px}.resume .accordion .expand{padding:10px 16px;border-top:2px dotted #DDDDDD;margin-top:15px}.resume .accordion .experience:not(:hover) .expand{font-size:0;margin:0;opacity:0;padding:0;transition:opacity .25s, font-size .5s .25s, margin .5s .25s, padding .5s .25s}.resume .accordion .experience:hover .expand{transition:font-size .25s, margin .25s, padding .25s, opacity .5s .25s}.resume #ski:hover h3{color:#DFE7E2}.gallery{margin:30px 0;display:flex;flex-wrap:wrap}.gallery div{width:31.3%;height:250px;margin:1%;box-shadow:1px 1px 6px #D8D8D8, -1px -1px 6px #D8D8D8}.gallery div:hover{transform:scale(1.04);z-index:1000;transition:all .5s 0s;cursor:pointer;overflow:hidden}.gallery img{width:100%;height:100%;object-fit:cover}.places-heading{display:flex;flex-wrap:wrap;margin:30px 0}.places-heading .places-name{background-repeat:no-repeat;background-size:cover;background-attachment:fixed;height:200px;width:50%;color:white;text-shadow:1px 1px 5px black;display:flex;justify-content:center;align-items:center}.places-heading #la{background-image:url("../images/szymon.jpg")}.places-heading #seattle{background-image:url("../images/pascal.jpg")}.places-heading .places-desc{width:44%;margin:0 3%;display:flex;justify-content:center;align-items:center}#contact{display:flex;flex-wrap:wrap;margin:30px 0}#contact form{margin-right:5%;width:45%;padding-left:15px;box-sizing:border-box}#contact input{padding:10px;box-sizing:border-box;border:none;border-bottom:1px solid black}#contact input:focus{outline:none;border-bottom:2px solid #DFE7E2}#contact input[type=checkbox]{margin:0 5px 0 30px}#contact .row{margin-bottom:20px;display:flex;flex-direction:column}#contact .label{font-weight:bold}#contact textarea{width:100%;height:15vh}#contact textarea:focus{outline:none;border:2px solid #DFE7E2}#contact .center{justify-content:center}#contact button{margin:0 10px}#contact iframe{width:50%;height:auto}footer #left{float:left}footer #right{float:right}footer a{margin:0 10px}footer p{margin-bottom:0}@media (max-width: 991px){#sidebar-top{display:initial}#container{margin-top:90px}.content-container{overflow:initial;height:initial}#sidebar-lg{display:none}.gallery div{width:48%}}@media (max-width: 767px){.content-container{margin:0 20px}#search form button{margin-left:10px}#introduction{flex-direction:column}#introduction div:nth-child(2){margin:30px 0 0 0}#explore-links{flex-wrap:wrap}#explore-links a{width:100%;margin:5px 0}#index-contact{text-align:left}#index-contact #contact-flex{text-align:left;flex-wrap:wrap}#index-contact #contact-flex div{width:100%;margin:5px 0}#index-contact #contact-flex div:nth-child(1){margin-top:0}#index-contact #contact-flex div:nth-child(2){margin-top:40px}.resume{flex-direction:column}.resume #order-left{order:-1}.resume .accordion{width:100%}.gallery div{width:100%;margin:2% 0}#contact{flex-direction:column}#contact form{width:100%;padding-right:20px}#contact iframe{width:100%;height:45vh;margin-top:30px}}
+@font-face {
+  font-family: 'Figtree Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Figtree Regular"), url("../fonts/figtree/Figtree-Regular.woff2") format("woff");
+}
+
+@font-face {
+  font-family: 'Figtree Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Figtree Italic"), url("../fonts/figtree/Figtree-Italic.woff2") format("woff");
+}
+
+@font-face {
+  font-family: 'Figtree Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Figtree Semibol"), url("../fonts/figtree/Figtree-SemiBold.woff2") format("woff");
+}
+
+@font-face {
+  font-family: 'Figtree Semibold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Figtree Semibol Italic"), url("../fonts/figtree/Figtree-SemiBoldItalic.woff2") format("woff");
+}
+
+@font-face {
+  font-family: 'Minion Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Minion Pro Regular"), url("../fonts/minion-pro/MinionPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Minion Pro Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Minion Pro Italic"), url("../fonts/minion-pro/MinionPro-It.woff") format("woff");
+}
+
+/* line 3, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Figtree Regular", sans-serif;
+  color: #111111;
+  font-size: 16px;
+}
+
+/* line 15, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+ul {
+  list-style: ">  ";
+  margin: 5px 0;
+  padding-left: 17px;
+}
+
+/* line 21, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+ul li {
+  margin: 5px 0;
+}
+
+/* line 25, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+ul li::marker {
+  color: #C0C0C0;
+}
+
+/* line 30, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+/* line 34, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+a:hover {
+  color: #77a6f8;
+  transition: all .3s 0s;
+  text-decoration: none;
+}
+
+/* line 41, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+h1, h3 {
+  font-family: "Figtree Semibold", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* line 51, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+h2 {
+  font-family: "Minion Pro Regular", serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* line 57, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+hr {
+  border-top: 1px solid #C0C0C0;
+}
+
+/* line 61, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#navbar {
+  width: 100%;
+  font-family: "Figtree Italic", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 68, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#navbar ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+/* line 78, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#navbar a {
+  color: #808080;
+}
+
+/* line 81, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#navbar a:hover {
+  color: #111111;
+  transition: all .3s 0s;
+}
+
+/* line 86, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#navbar a#nav-selected {
+  color: #111111;
+}
+
+/* line 91, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#navbar #socials {
+  text-align: right;
+  font-size: 12px;
+}
+
+/* line 95, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#navbar #socials a {
+  border-bottom: 0.15em solid #77a6f8;
+}
+
+/* line 101, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.bold {
+  font-family: "Figtree Semibold", sans-serif;
+}
+
+/* line 105, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.italic {
+  font-family: "Figtree Italic", sans-serif;
+  color: #808080;
+}
+
+/* line 112, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* line 122, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.highlighted {
+  background-color: #77a6f8;
+  padding: 0 3px;
+  color: white;
+}
+
+/* line 135, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#main {
+  margin-top: 20px;
+}
+
+/* line 138, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#main a {
+  border-bottom: 0.15em solid #77a6f8;
+}
+
+/* line 143, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#scroll-arrow-container {
+  position: fixed;
+  bottom: 25vh;
+  right: 6vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s 0s;
+}
+
+/* line 163, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#scroll-arrow-container i:hover {
+  color: #77a6f8;
+  cursor: pointer;
+  transition: all .3s 0s;
+}
+
+/* line 170, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#scroll-arrow-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 181, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#skills {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 185, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+#skills > div {
+  margin: 3px 0;
+}
+
+/* line 194, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* line 201, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.project-card p, .project-card h1 {
+  margin: 0;
+}
+
+/* line 207, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.project-title::before {
+  content: ">";
+  margin-right: 7px;
+  color: #C0C0C0;
+}
+
+/* line 214, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.project-tags {
+  color: #808080;
+  font-family: "Figtree Italic", sans-serif;
+  font-size: 14px;
+}
+
+/* line 223, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.img-gallery {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* line 230, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.img-gallery div {
+  max-width: 250px;
+  height: auto;
+  transition: all .3s 0s;
+}
+
+/* line 235, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.img-gallery div img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 241, /Users/yueqi/Desktop/Job Materials/personal_website_2025/sass/styles.scss */
+.img-gallery div:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=../css/styles.map */

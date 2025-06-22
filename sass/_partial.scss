@@ -1,0 +1,55 @@
+// Colors
+$accentColor: #77a6f8; // 3457D5 93C572 50C878
+$highlightColor: #77a6f8;
+$black: #111111;
+$grey: #808080;
+$lightGrey: #C0C0C0;
+
+// Fonts
+$bodyFont: 'Figtree Regular', sans-serif;
+$bodyItalicFont: 'Figtree Italic', sans-serif;
+$headFont: 'Figtree Semibold', sans-serif;
+$accentFont: 'Minion Pro Regular', serif;
+$accentItalicFont: 'Minion Pro Italic', serif;
+
+@font-face {
+    font-family: 'Figtree Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Figtree Regular'), url('../fonts/figtree/Figtree-Regular.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'Figtree Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Figtree Italic'), url('../fonts/figtree/Figtree-Italic.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'Figtree Semibold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Figtree Semibol'), url('../fonts/figtree/Figtree-SemiBold.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'Figtree Semibold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Figtree Semibol Italic'), url('../fonts/figtree/Figtree-SemiBoldItalic.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'Minion Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Minion Pro Regular'), url('../fonts/minion-pro/MinionPro-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Minion Pro Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Minion Pro Italic'), url('../fonts/minion-pro/MinionPro-It.woff') format('woff');
+}

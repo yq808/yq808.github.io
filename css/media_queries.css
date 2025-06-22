@@ -1,0 +1,44 @@
+@media (min-width:700px) {
+    #container {
+        width: 70%;
+        flex-direction: row;
+        margin: 75px 0 0 75px;
+    }
+
+    #navbar {
+        width: 30%;
+        height: 80vh;
+        justify-content: center;
+        margin-right: 75px;
+        gap: 20px;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        gap: 10px;
+
+        text-align: right;
+    }
+
+    #navbar #socials {
+        font-size: 14px;
+    }
+
+    #main {
+        width: 70%;
+    }
+
+    #skills > div {
+        justify-content: flex-start;
+        gap: 3px;
+    }
+
+    .img-gallery {
+        flex-direction: row;
+    }
+
+    #scroll-arrow-container {
+        bottom: 20vh;
+        right: 18vw;
+    }
+}
